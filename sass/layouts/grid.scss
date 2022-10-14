@@ -159,6 +159,44 @@
                     color: #000000;  
                 }
             } 
+            .flipCard {
+                background-color: transparent;
+                width: 300px;
+                height: 200px;
+                border: 1px solid #f1f1f1;
+                perspective: 1000px; 
+                border-radius: 20%;
+            }
+            .flipCardInner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+            .flipCard:hover .flipCardInner {
+                transform: rotateY(180deg);
+            }
+            .flipCardFront, .flipCardBack {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden; 
+                backface-visibility: hidden;
+            }
+            .flipCardFront {
+                background-color: #bbb;
+                color: black;
+                border-radius: 20%;
+            }
+            .flipCardBack {
+                background-color: #8498B0;
+                color: white;
+                transform: rotateY(180deg);
+                border-radius: 20%;
+            }
+            
         }
 
         .resumeOne{
@@ -205,37 +243,28 @@
             padding-bottom: 100px;
         }
         
-        .lastContact{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .pageLin{
-                color: #000000;
-                font-style: normal;
-                font-size: 28px;
-                text-align: justify;
-                line-height: 1.3;
-                margin-left: 40%;
-                font-family: 'Lato', sans-serif; 
-                padding-bottom: 5px; 
-            }
-            .lastLin{
-                img{
-                    width: 10%;
+        #epilegue{
+            .cardLinkedin{
+                margin-left: 42%;
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    color: #0e0e0ed5;
                 }
-            }
-            .mail{
-                color: #000000;
-                font-style: normal;
-                font-size: 28px;
-                text-align: justify;
-                line-height: 1.3;
-                margin-left: 40%;
-                font-family: 'Lato', sans-serif; 
-                padding-bottom: 5px; 
+                padding-bottom: 50px;
             }
         }
+
     } 
+
+    footer{
+        width: 100%;
+        height: 60px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -347,11 +376,10 @@
         }
 
         .sectionTwo{
-            padding-top: 100px;
             padding-bottom: 100px;
             .project{
                 display: grid;
-                grid-template-areas: "projectOne projectTwo projectThree";
+                grid-template-areas: "projectOne" "projectTwo" "projectThree";
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(3,1fr);
                 .projectOne{
@@ -359,6 +387,12 @@
                 }   
                 .projectTwo{
                     grid-area: projectTwo;
+                    .flipCardFront{
+                        img{
+                            height: 100%;
+
+                        }
+                    }
                 }
                 .projectThree{
                     grid-area: projectThree;
@@ -370,10 +404,11 @@
             .projects{
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
                 text-align: center;
                 padding:5px 16px;
+                margin-bottom: 50px;
                 p{
                     margin-top: 0px;
                 }
@@ -385,8 +420,45 @@
                     color: #000000;  
                 }
             } 
+            .flipCard {
+                background-color: transparent;
+                width: 300px;
+                height: 200px;
+                border: 1px solid #f1f1f1;
+                perspective: 1000px; 
+                border-radius: 20%;
+            }
+            .flipCardInner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+            .flipCard:hover .flipCardInner {
+                transform: rotateY(180deg);
+            }
+            .flipCardFront, .flipCardBack {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden; 
+                backface-visibility: hidden;
+            }
+            .flipCardFront {
+                background-color: #bbb;
+                color: black;
+                border-radius: 20%;
+            }
+            .flipCardBack {
+                background-color: #8498B0;
+                color: white;
+                transform: rotateY(180deg);
+                border-radius: 20%;
+            }
+            
         }
-
         .resumeOne{
             padding-top: 10px;
             padding-bottom: 50px;
@@ -428,38 +500,28 @@
         .otherSkills{
             padding-bottom: 100px;
         }
-        
-        .lastContact{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 16px;
-            .pageLin{
-                color: #000000;
-                font-style: normal;
-                font-size: 28px;
-                text-align: justify;
-                line-height: 1.3;
-                margin-left: 40%;
-                font-family: 'Lato', sans-serif; 
-                padding-bottom: 5px; 
-            }
-            .lastLin{
-                img{
-                    width: 10%;
+        #epilegue{
+            .cardLinkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    color: #0e0e0ed5;
                 }
-            }
-            .mail{
-                color: #000000;
-                font-style: normal;
-                font-size: 28px;
-                text-align: justify;
-                line-height: 1.3;
-                margin-left: 40%;
-                font-family: 'Lato', sans-serif; 
-                padding-bottom: 5px; 
+                padding-bottom: 50px;
             }
         }
+
+    }
+    footer{
+        width: 100%;
+        height: 60px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -547,36 +609,37 @@
                 }
             }
         }
+        #prologue{
+            .aboutFlex{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 30% auto;
+                .imagenAbout{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 50px;
+                }
+                .textAboutMe{
+                    color: #000000;
+                    width: 80%;
+                    padding-top: 50px;
+                    margin-left: 10%;
+                    font-style: normal;
+                    font-size: 16px;
+                    text-align: justify;
+                    line-height: 1.3;
+                    font-family: 'Lato', sans-serif;
 
-        .aboutFlex{
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 30% 70%;
-            .imagenAbout{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 50px;
-            }
-            .textAboutMe{
-                color: #000000;
-                padding: 50px;
-                width: 80%;
-                margin-left: 10%;
-                font-style: normal;
-                font-size: 16px;
-                text-align: justify;
-                line-height: 1.3;
-                font-family: 'Lato', sans-serif;
+                }
             }
         }
 
         .sectionTwo{
-            padding-top: 100px;
             padding-bottom: 100px;
             .project{
                 display: grid;
-                grid-template-areas: "projectOne projectTwo projectThree";
+                grid-template-areas: "projectOne" "projectTwo" "projectThree";
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(3,1fr);
                 .projectOne{
@@ -584,6 +647,12 @@
                 }   
                 .projectTwo{
                     grid-area: projectTwo;
+                    .flipCardFront{
+                        img{
+                            height: 100%;
+
+                        }
+                    }
                 }
                 .projectThree{
                     grid-area: projectThree;
@@ -595,10 +664,11 @@
             .projects{
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
                 text-align: center;
                 padding:5px 16px;
+                margin-bottom: 50px;
                 p{
                     margin-top: 0px;
                 }
@@ -610,6 +680,44 @@
                     color: #000000;  
                 }
             } 
+            .flipCard {
+                background-color: transparent;
+                width: 300px;
+                height: 200px;
+                border: 1px solid #f1f1f1;
+                perspective: 1000px; 
+                border-radius: 20%;
+            }
+            .flipCardInner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+            .flipCard:hover .flipCardInner {
+                transform: rotateY(180deg);
+            }
+            .flipCardFront, .flipCardBack {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden; 
+                backface-visibility: hidden;
+            }
+            .flipCardFront {
+                background-color: #bbb;
+                color: black;
+                border-radius: 20%;
+            }
+            .flipCardBack {
+                background-color: #8498B0;
+                color: white;
+                transform: rotateY(180deg);
+                border-radius: 20%;
+            }
+            
         }
 
         .resumeOne{
@@ -653,86 +761,36 @@
         .otherSkills{
         padding-bottom: 100px;
         }
-    
-        .lastContact{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 16px;
-            .pageLin{
-                color: #000000;
-                font-style: normal;
-                font-size: 28px;
-                text-align: justify;
-                line-height: 1.3;
-                margin-left: 40%;
-                font-family: 'Lato', sans-serif; 
-                padding-bottom: 5px; 
-            }
-            .lastLin{
-                img{
-                    width: 10%;
+
+        #epilegue{
+            .cardLinkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    color: #0e0e0ed5;
                 }
-            }
-            .mail{
-                color: #000000;
-                font-style: normal;
-                font-size: 28px;
-                text-align: justify;
-                line-height: 1.3;
-                margin-left: 40%;
-                font-family: 'Lato', sans-serif; 
-                padding-bottom: 5px; 
+                padding-bottom: 50px;
             }
         }
+    
+
+    }
+
+    footer{
+        width: 100%;
+        height: 60px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 
-.flipCard {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    border-radius: 20%;
-}
-.flipCardInner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-.flipCard:hover .flipCardInner {
-    transform: rotateY(180deg);
-}
-.flipCardFront, .flipCardBack {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-.flipCardFront {
-    background-color: #bbb;
-    color: black;
-    border-radius: 20%;
-}
-.flipCardBack {
-    background-color: #8498B0;
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 20%;
-}
-
-
-
 footer{
-    text-align: center;
-    width: 100%;
-    height: 70px;
     background: linear-gradient(0deg, #BEB9CF, #BEB9CF);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
 }

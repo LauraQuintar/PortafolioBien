@@ -145,6 +145,43 @@
     text-decoration: none;
     color: #000000;
   }
+  main .sectionTwo .flipCard {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    border-radius: 20%;
+  }
+  main .sectionTwo .flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  main .sectionTwo .flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+  }
+  main .sectionTwo .flipCardFront, main .sectionTwo .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  main .sectionTwo .flipCardFront {
+    background-color: #bbb;
+    color: black;
+    border-radius: 20%;
+  }
+  main .sectionTwo .flipCardBack {
+    background-color: #8498B0;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20%;
+  }
   main .resumeOne {
     padding-top: 10px;
     padding-bottom: 50px;
@@ -186,33 +223,22 @@
   main .otherSkills {
     padding-bottom: 100px;
   }
-  main .lastContact {
+  main #epilegue .cardLinkedin {
+    margin-left: 42%;
+    padding-bottom: 50px;
+  }
+  main #epilegue .cardLinkedin a {
+    text-decoration: none;
+    text-align: center;
+    color: rgba(14, 14, 14, 0.8352941176);
+  }
+  footer {
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  main .lastContact .pageLin {
-    color: #000000;
-    font-style: normal;
-    font-size: 28px;
-    text-align: justify;
-    line-height: 1.3;
-    margin-left: 40%;
-    font-family: "Lato", sans-serif;
-    padding-bottom: 5px;
-  }
-  main .lastContact .lastLin img {
-    width: 10%;
-  }
-  main .lastContact .mail {
-    color: #000000;
-    font-style: normal;
-    font-size: 28px;
-    text-align: justify;
-    line-height: 1.3;
-    margin-left: 40%;
-    font-family: "Lato", sans-serif;
-    padding-bottom: 5px;
   }
 }
 /*tablet*/
@@ -313,12 +339,11 @@
     font-family: "Lato", sans-serif;
   }
   main .sectionTwo {
-    padding-top: 100px;
     padding-bottom: 100px;
   }
   main .sectionTwo .project {
     display: grid;
-    grid-template-areas: "projectOne projectTwo projectThree";
+    grid-template-areas: "projectOne" "projectTwo" "projectThree";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -327,6 +352,9 @@
   }
   main .sectionTwo .project .projectTwo {
     grid-area: projectTwo;
+  }
+  main .sectionTwo .project .projectTwo .flipCardFront img {
+    height: 100%;
   }
   main .sectionTwo .project .projectThree {
     grid-area: projectThree;
@@ -337,10 +365,11 @@
   main .sectionTwo .projects {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 5px 16px;
+    margin-bottom: 50px;
   }
   main .sectionTwo .projects p {
     margin-top: 0px;
@@ -351,6 +380,43 @@
   main .sectionTwo .projects a {
     text-decoration: none;
     color: #000000;
+  }
+  main .sectionTwo .flipCard {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    border-radius: 20%;
+  }
+  main .sectionTwo .flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  main .sectionTwo .flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+  }
+  main .sectionTwo .flipCardFront, main .sectionTwo .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  main .sectionTwo .flipCardFront {
+    background-color: #bbb;
+    color: black;
+    border-radius: 20%;
+  }
+  main .sectionTwo .flipCardBack {
+    background-color: #8498B0;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20%;
   }
   main .resumeOne {
     padding-top: 10px;
@@ -391,34 +457,24 @@
   main .otherSkills {
     padding-bottom: 100px;
   }
-  main .lastContact {
+  main #epilegue .cardLinkedin {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 16px;
+    padding-bottom: 50px;
   }
-  main .lastContact .pageLin {
-    color: #000000;
-    font-style: normal;
-    font-size: 28px;
-    text-align: justify;
-    line-height: 1.3;
-    margin-left: 40%;
-    font-family: "Lato", sans-serif;
-    padding-bottom: 5px;
+  main #epilegue .cardLinkedin a {
+    text-decoration: none;
+    text-align: center;
+    color: rgba(14, 14, 14, 0.8352941176);
   }
-  main .lastContact .lastLin img {
-    width: 10%;
-  }
-  main .lastContact .mail {
-    color: #000000;
-    font-style: normal;
-    font-size: 28px;
-    text-align: justify;
-    line-height: 1.3;
-    margin-left: 40%;
-    font-family: "Lato", sans-serif;
-    padding-bottom: 5px;
+  footer {
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 /*mobile*/
@@ -496,21 +552,21 @@
     height: 80px;
     margin: 8px 16px 10px 0px;
   }
-  main .aboutFlex {
+  main #prologue .aboutFlex {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 30% auto;
   }
-  main .aboutFlex .imagenAbout {
+  main #prologue .aboutFlex .imagenAbout {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
   }
-  main .aboutFlex .textAboutMe {
+  main #prologue .aboutFlex .textAboutMe {
     color: #000000;
-    padding: 50px;
     width: 80%;
+    padding-top: 50px;
     margin-left: 10%;
     font-style: normal;
     font-size: 16px;
@@ -519,12 +575,11 @@
     font-family: "Lato", sans-serif;
   }
   main .sectionTwo {
-    padding-top: 100px;
     padding-bottom: 100px;
   }
   main .sectionTwo .project {
     display: grid;
-    grid-template-areas: "projectOne projectTwo projectThree";
+    grid-template-areas: "projectOne" "projectTwo" "projectThree";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -533,6 +588,9 @@
   }
   main .sectionTwo .project .projectTwo {
     grid-area: projectTwo;
+  }
+  main .sectionTwo .project .projectTwo .flipCardFront img {
+    height: 100%;
   }
   main .sectionTwo .project .projectThree {
     grid-area: projectThree;
@@ -543,10 +601,11 @@
   main .sectionTwo .projects {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 5px 16px;
+    margin-bottom: 50px;
   }
   main .sectionTwo .projects p {
     margin-top: 0px;
@@ -557,6 +616,43 @@
   main .sectionTwo .projects a {
     text-decoration: none;
     color: #000000;
+  }
+  main .sectionTwo .flipCard {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    border-radius: 20%;
+  }
+  main .sectionTwo .flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  main .sectionTwo .flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+  }
+  main .sectionTwo .flipCardFront, main .sectionTwo .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  main .sectionTwo .flipCardFront {
+    background-color: #bbb;
+    color: black;
+    border-radius: 20%;
+  }
+  main .sectionTwo .flipCardBack {
+    background-color: #8498B0;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20%;
   }
   main .resumeOne {
     padding-top: 10px;
@@ -597,83 +693,27 @@
   main .otherSkills {
     padding-bottom: 100px;
   }
-  main .lastContact {
+  main #epilegue .cardLinkedin {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 16px;
+    padding-bottom: 50px;
   }
-  main .lastContact .pageLin {
-    color: #000000;
-    font-style: normal;
-    font-size: 28px;
-    text-align: justify;
-    line-height: 1.3;
-    margin-left: 40%;
-    font-family: "Lato", sans-serif;
-    padding-bottom: 5px;
+  main #epilegue .cardLinkedin a {
+    text-decoration: none;
+    text-align: center;
+    color: rgba(14, 14, 14, 0.8352941176);
   }
-  main .lastContact .lastLin img {
-    width: 10%;
-  }
-  main .lastContact .mail {
-    color: #000000;
-    font-style: normal;
-    font-size: 28px;
-    text-align: justify;
-    line-height: 1.3;
-    margin-left: 40%;
-    font-family: "Lato", sans-serif;
-    padding-bottom: 5px;
+  footer {
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-.flipCard {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  border-radius: 20%;
-}
-
-.flipCardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flipCard:hover .flipCardInner {
-  transform: rotateY(180deg);
-}
-
-.flipCardFront, .flipCardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-.flipCardFront {
-  background-color: #bbb;
-  color: black;
-  border-radius: 20%;
-}
-
-.flipCardBack {
-  background-color: #8498B0;
-  color: white;
-  transform: rotateY(180deg);
-  border-radius: 20%;
-}
-
 footer {
-  text-align: center;
-  width: 100%;
-  height: 70px;
   background: linear-gradient(0deg, #BEB9CF, #BEB9CF);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
