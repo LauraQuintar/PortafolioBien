@@ -1,0 +1,11 @@
+{
+  "name": "PortfolioBien",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "Portfolio \"UX UI Designer\" Maria Laura Quintar"
+  },
+  "author": "Maria Laura Quintar",
+  "license": "ISC"
+}
