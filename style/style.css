@@ -242,7 +242,7 @@
   }
 }
 /*tablet*/
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   header ul {
     list-style: none;
     display: flex;
@@ -375,7 +375,7 @@
     margin-top: 0px;
   }
   main .sectionTwo .projects img {
-    border-radius: 20%;
+    border-radius: 10%;
   }
   main .sectionTwo .projects a {
     text-decoration: none;
@@ -383,40 +383,16 @@
   }
   main .sectionTwo .flipCard {
     background-color: transparent;
-    width: 300px;
+    width: 80%;
     height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
-    border-radius: 20%;
   }
   main .sectionTwo .flipCardInner {
-    position: relative;
     width: 100%;
-    height: 100%;
+    height: 200px;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  main .sectionTwo .flipCard:hover .flipCardInner {
-    transform: rotateY(180deg);
-  }
-  main .sectionTwo .flipCardFront, main .sectionTwo .flipCardBack {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  main .sectionTwo .flipCardFront {
-    background-color: #bbb;
-    color: black;
-    border-radius: 20%;
   }
   main .sectionTwo .flipCardBack {
-    background-color: #8498B0;
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 20%;
+    opacity: 0;
   }
   main .resumeOne {
     padding-top: 10px;
@@ -478,7 +454,7 @@
   }
 }
 /*mobile*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   header ul {
     list-style: none;
     display: flex;
@@ -586,19 +562,25 @@
   main .sectionTwo .project .projectOne {
     grid-area: projectOne;
   }
+  main .sectionTwo .project .projectOne .flipCardFront a img {
+    height: 100%;
+    width: 100%;
+  }
   main .sectionTwo .project .projectTwo {
     grid-area: projectTwo;
   }
-  main .sectionTwo .project .projectTwo .flipCardFront img {
+  main .sectionTwo .project .projectTwo .flipCardFront a img {
     height: 100%;
+    width: 100%;
   }
   main .sectionTwo .project .projectThree {
     grid-area: projectThree;
   }
-  main .sectionTwo .project .projectThree img {
+  main .sectionTwo .project .projectThree .flipCardFront a img {
     height: 100%;
+    width: 100%;
   }
-  main .sectionTwo .projects {
+  main .sectionTwo .project .projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -607,58 +589,34 @@
     padding: 5px 16px;
     margin-bottom: 50px;
   }
-  main .sectionTwo .projects p {
+  main .sectionTwo .project .projects p {
     margin-top: 0px;
   }
-  main .sectionTwo .projects img {
-    border-radius: 20%;
+  main .sectionTwo .project .projects img {
+    border-radius: 10%;
   }
-  main .sectionTwo .projects a {
+  main .sectionTwo .project .projects a {
     text-decoration: none;
     color: #000000;
   }
-  main .sectionTwo .flipCard {
+  main .sectionTwo .project .flipCard {
     background-color: transparent;
-    width: 300px;
+    width: 80%;
     height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
-    border-radius: 20%;
   }
-  main .sectionTwo .flipCardInner {
-    position: relative;
+  main .sectionTwo .project .flipCardInner {
     width: 100%;
-    height: 100%;
+    height: 200px;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
   }
-  main .sectionTwo .flipCard:hover .flipCardInner {
-    transform: rotateY(180deg);
+  main .sectionTwo .project .flipCardBack {
+    opacity: 0;
   }
-  main .sectionTwo .flipCardFront, main .sectionTwo .flipCardBack {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  main .sectionTwo .flipCardFront {
-    background-color: #bbb;
-    color: black;
-    border-radius: 20%;
-  }
-  main .sectionTwo .flipCardBack {
-    background-color: #8498B0;
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 20%;
-  }
-  main .resumeOne {
+  main .sectionTwo .resumeOne {
     padding-top: 10px;
     padding-bottom: 50px;
   }
-  main .university {
+  main .sectionTwo .university {
     color: #000000;
     font-style: normal;
     font-size: 16px;
@@ -668,7 +626,7 @@
     padding-top: 10px;
     padding-bottom: 3px;
   }
-  main .titule {
+  main .sectionTwo .titule {
     color: #000000;
     font-style: italic;
     font-size: 16px;
@@ -678,7 +636,7 @@
     padding-bottom: 3px;
     margin: 0px 16px;
   }
-  main .date {
+  main .sectionTwo .date {
     color: #000000;
     font-style: normal;
     font-size: 16px;
@@ -687,19 +645,19 @@
     font-family: "Lato", sans-serif;
     padding-bottom: 5px;
   }
-  main .studiesTwo {
+  main .sectionTwo .studiesTwo {
     padding-bottom: 100px;
   }
-  main .otherSkills {
+  main .sectionTwo .otherSkills {
     padding-bottom: 100px;
   }
-  main #epilogue .cardLinkedin {
+  main .sectionTwo #epilogue .cardLinkedin {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
   }
-  main #epilogue .cardLinkedin a {
+  main .sectionTwo #epilogue .cardLinkedin a {
     text-decoration: none;
     text-align: center;
     color: rgba(14, 14, 14, 0.8352941176);

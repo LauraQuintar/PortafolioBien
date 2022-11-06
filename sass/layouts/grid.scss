@@ -8,6 +8,7 @@
 
 /*destok*/
 @media (min-width:1200px){
+
     header{
         ul{
             list-style: none;
@@ -29,6 +30,7 @@
 
 
     main { background: linear-gradient(180deg, #FEE1E3 0%, #BEB9CF 100%);
+
         h2{
             color: #F2A2B8;
             font-weight: bold;
@@ -73,7 +75,6 @@
                     padding-top: 100px;
                     width: 65%;
                 }
-
             }
             .spotify{
                 display: flex;
@@ -196,13 +197,12 @@
                 transform: rotateY(180deg);
                 border-radius: 20%;
             }
-            
         }
 
         .resumeOne{
             padding-top: 10px;
             padding-bottom: 50px;
-            }
+        }
             .university{
                 color: #000000;
                 font-style: normal;
@@ -234,10 +234,11 @@
                 font-family: 'Lato', sans-serif; 
                 padding-bottom: 5px;
             }
-            
+        
+
         .studiesTwo{
             padding-bottom: 100px; 
-            }
+        }
 
         .otherSkills{
             padding-bottom: 100px;
@@ -254,7 +255,6 @@
                 padding-bottom: 50px;
             }
         }
-
     } 
 
     footer{
@@ -270,7 +270,8 @@
 
 
 /*tablet*/
-@media (min-width:769px) and (max-width:1199px){
+@media (min-width:768px) and (max-width:1199px){
+
     header{
         ul{
             list-style: none;
@@ -328,7 +329,6 @@
                     padding-top: 100px;
                     width: 100%;
                 }
-
             }
             .spotify{
                 display: flex;
@@ -412,7 +412,7 @@
                     margin-top: 0px;
                 }
                 img{
-                    border-radius: 20%;
+                    border-radius: 10%;
                 }
                 a{
                     text-decoration: none;
@@ -421,43 +421,19 @@
             } 
             .flipCard {
                 background-color: transparent;
-                width: 300px;
-                height: 200px;
-                border: 1px solid #f1f1f1;
-                perspective: 1000px; 
-                border-radius: 20%;
+                width: 80%;
+                height: 200px;  
             }
             .flipCardInner {
-                position: relative;
                 width: 100%;
-                height: 100%;
+                height: 200px;
                 text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-            }
-            .flipCard:hover .flipCardInner {
-                transform: rotateY(180deg);
-            }
-            .flipCardFront, .flipCardBack {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                -webkit-backface-visibility: hidden; 
-                backface-visibility: hidden;
-            }
-            .flipCardFront {
-                background-color: #bbb;
-                color: black;
-                border-radius: 20%;
             }
             .flipCardBack {
-                background-color: #8498B0;
-                color: white;
-                transform: rotateY(180deg);
-                border-radius: 20%;
-            }
-            
+                opacity: 0;
+            }      
         }
+
         .resumeOne{
             padding-top: 10px;
             padding-bottom: 50px;
@@ -499,6 +475,7 @@
         .otherSkills{
             padding-bottom: 100px;
             }
+
         #epilogue{
             .cardLinkedin{
                 display: flex;
@@ -512,7 +489,6 @@
                 padding-bottom: 50px;
             }
         }
-
     }
 
 
@@ -529,8 +505,10 @@
 
 
 /*mobile*/
-@media (max-width: 768px){
+@media (max-width: 767px){
+
     header{
+
         ul{
             list-style: none;
             display: flex;
@@ -545,7 +523,7 @@
 
 
     main {  
-        background: linear-gradient(180deg, #FEE1E3 0%, #BEB9CF 100%);
+    background: linear-gradient(180deg, #FEE1E3 0%, #BEB9CF 100%);
         h2{
             color: #F2A2B8;
             font-weight: bold;
@@ -593,7 +571,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            .textSpotify{
+                .textSpotify{
                 margin: 8px 8px 10px 16px;
                 color: #000000;
                 font-style: normal;
@@ -603,13 +581,14 @@
                 margin-right: 10px;
                 text-align: center;
                 }
-            .spotifyPlay{
+                .spotifyPlay{
                 width: 20%;
                 height: 80px;
                 margin: 8px 16px 10px 0px;
                 }
             }
         }
+
         #prologue{
             .aboutFlex{
                 display: grid;
@@ -631,7 +610,6 @@
                     text-align: justify;
                     line-height: 1.3;
                     font-family: 'Lato', sans-serif;
-
                 }
             }
         }
@@ -645,23 +623,38 @@
                 grid-template-rows: repeat(3,1fr);
                 .projectOne{
                     grid-area: projectOne;
-                }   
+                    .flipCardFront{
+                        a{
+                            img{
+                                height: 100%;
+                                width:100%;    
+                            }
+                        }
+                    }   
+                }
                 .projectTwo{
                     grid-area: projectTwo;
                     .flipCardFront{
-                        img{
-                            height: 100%;
-
+                        a{
+                            img{
+                                height: 100%;
+                                width:100%;    
+                            }
                         }
                     }
                 }
                 .projectThree{
                     grid-area: projectThree;
-                    img{
-                        height: 100%;
+                    .flipCardFront{
+                        a{
+                            img{
+                                height: 100%;
+                                width:100%;    
+                            }
+                        }
                     }  
                 }
-            }
+            
             .projects{
                 display: flex;
                 flex-direction: column;
@@ -674,52 +667,27 @@
                     margin-top: 0px;
                 }
                 img{
-                    border-radius: 20%;
+                    border-radius: 10%;
                 }
                 a{
                     text-decoration: none;
                     color: #000000;  
                 }
-            } 
+            }
             .flipCard {
                 background-color: transparent;
-                width: 300px;
+                width: 80%;
                 height: 200px;
-                border: 1px solid #f1f1f1;
-                perspective: 1000px; 
-                border-radius: 20%;
             }
             .flipCardInner {
-                position: relative;
                 width: 100%;
-                height: 100%;
+                height: 200px;
                 text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-            }
-            .flipCard:hover .flipCardInner {
-                transform: rotateY(180deg);
-            }
-            .flipCardFront, .flipCardBack {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                -webkit-backface-visibility: hidden; 
-                backface-visibility: hidden;
-            }
-            .flipCardFront {
-                background-color: #bbb;
-                color: black;
-                border-radius: 20%;
             }
             .flipCardBack {
-                background-color: #8498B0;
-                color: white;
-                transform: rotateY(180deg);
-                border-radius: 20%;
+                opacity: 0;
             }
-            
-        }
+        }   
 
         .resumeOne{
             padding-top: 10px;
@@ -776,10 +744,8 @@
                 padding-bottom: 50px;
             }
         }
-    
-
     }
-
+}
     
     footer{
         width: 100%;
@@ -789,13 +755,15 @@
         justify-content: center;
         align-items: center;
     }
-}
+}    
+
 
 
 footer{
     background: linear-gradient(0deg, #BEB9CF, #BEB9CF);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 
 
 .mainProject{
