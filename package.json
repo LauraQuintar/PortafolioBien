@@ -1,11 +1,19 @@
 {
-  "name": "PortfolioBien",
+  "name": "portfoliobien",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "Portfolio \"UX UI Designer\" Maria Laura Quintar"
   },
   "author": "Maria Laura Quintar",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraQuintar/PortafolioBien.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LauraQuintar/PortafolioBien/issues"
+  },
+  "homepage": "https://github.com/LauraQuintar/PortafolioBien#readme",
+  "description": ""
 }

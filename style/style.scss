@@ -600,6 +600,7 @@
   }
   main .sectionTwo .projects {
     display: flex;
+    border-color: red;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -722,4 +723,4 @@ footer {
   height: 100vh;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */
